@@ -1,0 +1,1 @@
+{"prediction_id": "pred_001", "timestamp_utc": "2026-07-22T11:03:57.609028", "prediction": 150.0, "confidence": 20.0, "reason": "Missing weather data", "features": {"pm25": 100}}

@@ -1,0 +1,23 @@
+{
+  "run_id": "run_20260722T101218Z",
+  "started_at": "2026-07-22T10:12:18.219761",
+  "finished_at": "2026-07-22T10:12:22.484948",
+  "total": 1,
+  "succeeded": 1,
+  "failed": 0,
+  "skipped": 0,
+  "records": [
+    {
+      "connector_id": "cpcb",
+      "status": "SUCCESS",
+      "started_at": "2026-07-22T10:12:18.219778",
+      "finished_at": "2026-07-22T10:12:22.484916",
+      "rows_raw": 116089,
+      "rows_processed": 116089,
+      "quality_score": 67.89,
+      "raw_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/raw/cpcb/20260722T101218Z.json",
+      "processed_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/processed/cpcb/20260722T101222Z.json",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "connector": "cpcb",
+  "provider": "CSVReplay",
+  "dataset": "DL001",
+  "download_time": "2026-07-22T10:12:50.899590",
+  "rows": 116112,
+  "checksum": "92c05d59e89453401b954ef325ce1b3d",
+  "quality": 100.0,
+  "source_url": "/Users/arsheelpatel/Desktop/AirSenseAgent/gov_data/archive/DL001.csv",
+  "raw_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/raw/cpcb/20260722T101250Z.json"
+}

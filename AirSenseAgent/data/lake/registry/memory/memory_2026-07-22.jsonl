@@ -1,0 +1,2 @@
+{"prediction_id": "pred_001", "timestamp_utc": "2026-07-22T11:03:57.609319", "event_type": "PREDICTION", "model_version": "v1.0", "predicted_value": 150.0, "confidence": 20.0, "shap_reasons": {"wind_speed": 54.35, "pm25": 45.65}, "features": {"pm25": 100}}
+{"prediction_id": "pred_001", "timestamp_utc": "2026-07-22T11:03:57.609425", "event_type": "OUTCOME", "actual_value": 170.0}

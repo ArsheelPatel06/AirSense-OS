@@ -1,0 +1,35 @@
+{
+  "run_id": "run_20260722T101257Z",
+  "started_at": "2026-07-22T10:12:57.459007",
+  "finished_at": "2026-07-22T10:13:04.414080",
+  "total": 2,
+  "succeeded": 2,
+  "failed": 0,
+  "skipped": 0,
+  "records": [
+    {
+      "connector_id": "cpcb_delhi",
+      "status": "SUCCESS",
+      "started_at": "2026-07-22T10:12:57.459027",
+      "finished_at": "2026-07-22T10:12:59.889337",
+      "rows_raw": 116112,
+      "rows_processed": 116112,
+      "quality_score": 82.77,
+      "raw_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/raw/cpcb_delhi/20260722T101257Z.json",
+      "processed_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/processed/cpcb_delhi/20260722T101259Z.json",
+      "error": ""
+    },
+    {
+      "connector_id": "cpcb_mumbai",
+      "status": "SUCCESS",
+      "started_at": "2026-07-22T10:12:59.889371",
+      "finished_at": "2026-07-22T10:13:04.413950",
+      "rows_raw": 116089,
+      "rows_processed": 116089,
+      "quality_score": 67.89,
+      "raw_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/raw/cpcb_mumbai/20260722T101300Z.json",
+      "processed_lake_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/processed/cpcb_mumbai/20260722T101303Z.json",
+      "error": ""
+    }
+  ]
+}

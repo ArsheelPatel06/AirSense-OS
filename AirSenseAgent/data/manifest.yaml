@@ -1,0 +1,43 @@
+# AirSense Single Source of Truth
+# Every ETL and Connector strictly obeys this manifest.
+
+datasets:
+  cpcb:
+    source: "Central Pollution Control Board"
+    update_frequency: "daily"
+    data_type: "tabular"
+    contract: "sensor_contract"
+    minimum_quality_score: 90
+    required_columns: ["timestamp", "station_id", "latitude", "longitude", "pm25", "pm10", "aqi"]
+    
+  imd:
+    source: "India Meteorological Department"
+    update_frequency: "hourly"
+    data_type: "tabular"
+    contract: "weather_contract"
+    minimum_quality_score: 85
+    
+  tropomi:
+    source: "Sentinel-5P"
+    update_frequency: "daily"
+    data_type: "geospatial"
+    contract: "satellite_contract"
+    minimum_quality_score: 80
+    
+  viirs:
+    source: "NASA FIRMS"
+    update_frequency: "6h"
+    data_type: "geospatial"
+    contract: "satellite_contract"
+    
+  citizen_reports:
+    source: "AirSense Mobile App"
+    update_frequency: "realtime"
+    data_type: "tabular"
+    contract: "citizen_contract"
+    
+  drone_telemetry:
+    source: "AirSense Drone Fleet"
+    update_frequency: "realtime"
+    data_type: "tabular"
+    contract: "drone_contract"

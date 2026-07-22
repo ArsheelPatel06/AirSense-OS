@@ -1,0 +1,31 @@
+{
+  "scenario": "pollution_spike",
+  "sensors": [
+    {
+      "station_id": "S1",
+      "pm25": 180,
+      "pm10": 210,
+      "no2": 75
+    }
+  ],
+  "weather": [
+    {
+      "wind_speed": 2.0,
+      "temperature": 32,
+      "humidity": 80
+    }
+  ],
+  "satellite": [
+    {
+      "aerosol_index": 1.2,
+      "no2_column_density": 0.0004
+    }
+  ],
+  "citizen_reports": [
+    {
+      "type": "traffic_jam",
+      "count": 8,
+      "confidence": 0.9
+    }
+  ]
+}

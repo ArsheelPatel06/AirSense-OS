@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+*.pkl
+*.log
+
+# Data
+data/*.csv
+!data/training_data.csv
+
+# Artifacts
+last_observation.json
+.DS_Store

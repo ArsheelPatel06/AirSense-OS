@@ -1,0 +1,11 @@
+{
+  "connector": "cpcb_mumbai",
+  "provider": "CSVReplay",
+  "dataset": "MH001",
+  "download_time": "2026-07-22T10:13:00.207194",
+  "rows": 116089,
+  "checksum": "8f5758c1b813392ed05d9bd1ece28b49",
+  "quality": 100.0,
+  "source_url": "/Users/arsheelpatel/Desktop/AirSenseAgent/gov_data/archive/MH001.csv",
+  "raw_path": "/Users/arsheelpatel/Desktop/AirSenseAgent/data/lake/raw/cpcb_mumbai/20260722T101300Z.json"
+}
