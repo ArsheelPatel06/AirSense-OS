@@ -23,3 +23,16 @@ coverage/
 *.njsproj
 *.sln
 *.sw?
+*.mp4
+
+# Vite cache
+.vite/
+
+# Temp images & copies
+image*.png
+"image copy*"
+frontend copy/
+
+# Dev scripts
+check_console.cjs
+take_screenshot.cjs

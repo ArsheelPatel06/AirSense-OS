@@ -1,0 +1,306 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme {
+  /* Global / Dark Mode defaults */
+  --color-background: #0B0F19;
+  --color-surface: rgba(20, 25, 40, 0.7);
+  --color-surface-hover: rgba(30, 35, 55, 0.8);
+  --color-primary: #3B82F6;
+  --color-secondary: #2563EB;
+  --color-accent: #10B981;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Landing Page Specific Colors */
+  --color-landing-bg: #FAF9F6;
+  --color-landing-primary: #7ACB7A;
+  --color-landing-secondary: #4CAF50;
+  --color-landing-accent: #2F6B3F;
+  --color-landing-text: #1F2937;
+  --color-landing-text-sec: #6B7280;
+
+  /* Technical Light Theme (IoT) */
+  --color-iot-bg: #F6F8FB;
+  --color-iot-surface: #FBFCFE;
+  --color-iot-card: #FFFFFF;
+  --color-iot-sidebar: #F9FAFC;
+  --color-iot-header: #FFFFFF;
+  
+  --color-iot-text-primary: #1F2937;
+  --color-iot-text-secondary: #4B5563;
+  --color-iot-text-muted: #6B7280;
+  --color-iot-text-disabled: #9CA3AF;
+
+  --color-iot-brand: #2F9E44;
+  --color-iot-brand-hover: #2B8A3E;
+  --color-iot-brand-surface: #EAF8EE;
+
+  --color-iot-blue: #2F80ED;
+  --color-iot-blue-surface: #EBF4FF;
+
+  --color-iot-success: #22C55E;
+  --color-iot-warning: #F59E0B;
+  --color-iot-critical: #EF4444;
+  --color-iot-info: #0EA5E9;
+
+  --color-iot-border: #E5E7EB;
+
+  /* ─── Operations Platform: Light Mission (default) ─────────────────── */
+  --color-ops-bg: #F4F7FB;
+  --color-ops-surface: #F8FAFC;
+  --color-ops-card: #FFFFFF;
+  --color-ops-sidebar: #F8FAFC;
+  --color-ops-header: #FFFFFF;
+  --color-ops-border: #E2E8F0;
+
+  --color-ops-text-primary: #0F172A;
+  --color-ops-text-secondary: #475569;
+  --color-ops-text-muted: #64748B;
+  --color-ops-text-disabled: #94A3B8;
+
+  --color-ops-brand: #2563EB;
+  --color-ops-brand-hover: #1D4ED8;
+  --color-ops-brand-surface: #EFF6FF;
+
+  --color-ops-critical: #DC2626;
+  --color-ops-warning: #F59E0B;
+  --color-ops-success: #22C55E;
+  --color-ops-info: #0EA5E9;
+
+  /* ─── Government Platform: Light Executive (default) ─────────────────── */
+  --color-gov-bg: #F5F7FF;
+  --color-gov-surface: #FAFBFF;
+  --color-gov-card: #FFFFFF;
+  --color-gov-sidebar: #1E3A5F;
+  --color-gov-sidebar-surface: #254571;
+  --color-gov-header: #FFFFFF;
+  --color-gov-border: #E1E7F5;
+
+  --color-gov-text-primary: #0D1F3C;
+  --color-gov-text-secondary: #3D5278;
+  --color-gov-text-muted: #6B7FA3;
+  --color-gov-text-disabled: #A0AFCC;
+  --color-gov-text-sidebar: #C8D8F0;
+  --color-gov-text-sidebar-muted: #7B96BF;
+
+  --color-gov-brand: #1E5AAB;
+  --color-gov-brand-hover: #164A8F;
+  --color-gov-brand-surface: #EBF3FF;
+  --color-gov-brand-light: #3B82F6;
+
+  --color-gov-critical: #DC2626;
+  --color-gov-warning: #D97706;
+  --color-gov-success: #16A34A;
+  --color-gov-info: #0284C7;
+  --color-gov-purple: #7C3AED;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--color-landing-primary)] to-[var(--color-landing-secondary)] hover:shadow-lg hover:shadow-[var(--color-landing-primary)]/30 transition-all duration-300 transform active:scale-95 flex items-center justify-center gap-2;
+  }
+  .btn-secondary {
+    @apply px-6 py-2.5 rounded-full font-semibold text-[var(--color-landing-text)] bg-white border border-gray-200 hover:border-[var(--color-landing-primary)] hover:text-[var(--color-landing-primary)] transition-all duration-300 shadow-sm hover:shadow-md active:scale-95 flex items-center justify-center gap-2;
+  }
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-sm;
+  }
+}
+
+.theme-landing {
+  color-scheme: light;
+  background-color: var(--color-landing-bg);
+  color: var(--color-landing-text);
+  
+  /* Override global theme colors for landing page */
+  --color-background: var(--color-landing-bg);
+  --color-primary: var(--color-landing-primary);
+  --color-secondary: var(--color-landing-secondary);
+  --color-accent: var(--color-landing-accent);
+  --color-text-primary: var(--color-landing-text);
+  --color-text-secondary: var(--color-landing-text-sec);
+}
+
+/* ─── Operations: Light Mission ─────────────────────────────────────── */
+.theme-ops-light {
+  color-scheme: light;
+  --color-ops-bg: #F4F7FB;
+  --color-ops-surface: #F8FAFC;
+  --color-ops-card: #FFFFFF;
+  --color-ops-sidebar: #F8FAFC;
+  --color-ops-header: #FFFFFF;
+  --color-ops-border: #E2E8F0;
+  --color-ops-text-primary: #0F172A;
+  --color-ops-text-secondary: #475569;
+  --color-ops-text-muted: #64748B;
+  --color-ops-text-disabled: #94A3B8;
+  --color-ops-brand: #2563EB;
+  --color-ops-brand-hover: #1D4ED8;
+  --color-ops-brand-surface: #EFF6FF;
+  --color-ops-critical: #DC2626;
+  --color-ops-warning: #F59E0B;
+  --color-ops-success: #22C55E;
+  --color-ops-info: #0EA5E9;
+}
+
+/* ─── Operations: Mission Dark ──────────────────────────────────────── */
+.theme-ops-dark {
+  color-scheme: dark;
+  --color-ops-bg: #000000;
+  --color-ops-surface: #1C1C1E;
+  --color-ops-card: #1C1C1E;
+  --color-ops-sidebar: #000000;
+  --color-ops-header: #000000;
+  --color-ops-border: #38383A;
+  --color-ops-text-primary: #FFFFFF;
+  --color-ops-text-secondary: #8E8E93;
+  --color-ops-text-muted: #636366;
+  --color-ops-text-disabled: #48484A;
+  --color-ops-brand: #0A84FF;
+  --color-ops-brand-hover: #409CFF;
+  --color-ops-brand-surface: rgba(10,132,255,0.15);
+  --color-ops-critical: #FF453A;
+  --color-ops-warning: #FF9F0A;
+  --color-ops-success: #32D74B;
+  --color-ops-info: #64D2FF;
+}
+
+/* Ops-scoped scrollbar */
+.theme-ops-dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); }
+.theme-ops-dark ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+.theme-ops-light ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); }
+.theme-ops-light ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.14); }
+
+/* ─── Government Platform: Light Executive ───────────────────────── */
+.theme-gov-light {
+  color-scheme: light;
+  --color-gov-bg: #F4F7FB; /* Soft, airy slate-blue background */
+  --color-gov-surface: #FFFFFF;
+  --color-gov-card: #FFFFFF; 
+  --color-gov-sidebar: #FFFFFF; /* Pure white sidebar */
+  --color-gov-sidebar-surface: #F0F9FF; /* Light blue tint for active items */
+  --color-gov-header: #FFFFFF;
+  --color-gov-border: #E2E8F0; /* Soft borders */
+  --color-gov-text-primary: #1E293B; /* Deep slate, high readability */
+  --color-gov-text-secondary: #475569;
+  --color-gov-text-muted: #64748B;
+  --color-gov-text-disabled: #94A3B8;
+  --color-gov-text-sidebar: #475569;
+  --color-gov-text-sidebar-muted: #94A3B8;
+  --color-gov-brand: #026AA2; /* Bright, official sky/ocean blue */
+  --color-gov-brand-hover: #03466B;
+  --color-gov-brand-surface: #F0F9FF; /* Very soft blue for hover/active states */
+  --color-gov-brand-light: #38BDF8;
+  --color-gov-critical: #D92D20;
+  --color-gov-warning: #DC6803;
+  --color-gov-success: #079455;
+  --color-gov-info: #0284C7;
+  --color-gov-purple: #7A5AF8;
+}
+
+/* ─── Government Platform: Executive Dark ────────────────────────── */
+.theme-gov-dark {
+  color-scheme: dark;
+  --color-gov-bg: #111317;
+  --color-gov-surface: #1A1D23;
+  --color-gov-card: #1A1D23;
+  --color-gov-sidebar: #0B0D10;
+  --color-gov-sidebar-surface: #1A1D23;
+  --color-gov-header: #111317;
+  --color-gov-border: #2B303B;
+  --color-gov-text-primary: #EAECEF;
+  --color-gov-text-secondary: #8B949E;
+  --color-gov-text-muted: #57606A;
+  --color-gov-text-disabled: #484F58;
+  --color-gov-text-sidebar: #C9D1D9;
+  --color-gov-text-sidebar-muted: #8B949E;
+  --color-gov-brand: #3A78D0;
+  --color-gov-brand-hover: #3163A8;
+  --color-gov-brand-surface: rgba(58, 120, 208, 0.15);
+  --color-gov-brand-light: #5892E6;
+  --color-gov-critical: #F85149;
+  --color-gov-warning: #D29922;
+  --color-gov-success: #2EA043;
+  --color-gov-info: #58A6FF;
+  --color-gov-purple: #A371F7;
+}
+
+.theme-gov-dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); }
+.theme-gov-dark ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+.theme-gov-light ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); }
+.theme-gov-light ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.14); }
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* MapLibre dark theme overrides */
+.maplibregl-popup-content {
+  background: var(--color-surface) !important;
+  backdrop-filter: blur(12px) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: var(--color-border) !important;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@layer utilities {
+  .animate-plume-move {
+    animation: plumeMove 8s infinite alternate ease-in-out;
+  }
+  .animate-plume-expand {
+    animation: plumeExpand 10s infinite alternate ease-in-out;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
+
+@keyframes plumeMove {
+  0% { transform: translate(-20px, 20px) scale(0.8); }
+  50% { transform: translate(10px, -10px) scale(1.2); }
+  100% { transform: translate(40px, -30px) scale(1.5); opacity: 0.1; }
+}
+
+@keyframes plumeExpand {
+  0% { transform: translate(-10px, 10px) scale(1); }
+  100% { transform: translate(30px, -20px) scale(1.8); opacity: 0.05; }
+}
