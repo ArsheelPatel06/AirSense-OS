@@ -102,7 +102,12 @@ export function AppHeader({ onMenuClick, isOps = false, isGov = false }: AppHead
           >
             <Menu className="w-5 h-5" />
           </button>
-          <span className={`hidden sm:inline text-[13px] font-semibold ${platformLabelColor}`}>{platformLabel}</span>
+          <Link 
+            to={isGov ? '/government' : isOps ? '/operations' : '/iot/devices'} 
+            className={`hidden sm:inline text-[13px] font-semibold hover:underline ${platformLabelColor}`}
+          >
+            {platformLabel}
+          </Link>
         </div>
 
         {/* Center: Global Search */}
