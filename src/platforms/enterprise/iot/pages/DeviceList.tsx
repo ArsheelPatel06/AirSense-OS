@@ -124,7 +124,7 @@ export function DeviceList() {
                   <input 
                     type="checkbox" 
                     className="rounded border-[var(--color-iot-border)] text-[var(--color-iot-brand)] focus:ring-[var(--color-iot-brand)] w-3.5 h-3.5 cursor-pointer"
-                    checked={selectedDevices.size === MOCK_DEVICES.length}
+                    checked={selectedDevices.size === state.devices.length && state.devices.length > 0}
                     onChange={toggleSelectAll}
                   />
                 </th>
